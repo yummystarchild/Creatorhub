@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Restorative Scalp & Hair Rituals</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Montserrat', sans-serif;
+      color: #fff;
+      background-color: #000;
+      overflow: hidden;
+    }
+
+    video#bg-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      z-index: -1;
+      opacity: 0.5;
+    }
+
+    .content {
+      position: relative;
+      top: 40%;
+      text-align: center;
+      transform: translateY(-50%);
+      z-index: 1;
+    }
+
+    .title {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8em;
+      margin-bottom: 0.3em;
+      animation: fadeIn 2s ease-in;
+    }
+
+    .subtitle {
+      font-size: 1.2em;
+      margin-bottom: 1.5em;
+      animation: fadeIn 3s ease-in;
+    }
+
+    .start-button {
+      font-size: 1em;
+      padding: 0.8em 2em;
+      background-color: gold;
+      border: none;
+      cursor: pointer;
+      color: #000;
+      font-weight: 600;
+      animation: fadeIn 4s ease-in;
+    }
+
+    .skip-link {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      color: #ccc;
+      font-size: 0.9em;
+      cursor: pointer;
+      z-index: 2;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+<video autoplay muted loop id="bg-video">
+  <source src="videos/golden_glitter_dust_smoke.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+<div class="content">
+  <div class="title">Restorative Scalp & Hair Rituals</div>
+  <div class="subtitle">Personalized rituals powered by AI, designed for your care.</div>
+  <button class="start-button" onclick="window.location.href='/select_quiz'">Start Here</button>
+</div>
+
+<div class="skip-link" onclick="showSkipWarning()">Skip</div>
+
+<script>
+  function showSkipWarning() {
+    if (confirm("Skipping this ritual may result in less accurate recommendations for your scalp and hair needs. Would you like to continue anyway?")) {
+      window.location.href = "/about";
+    }
+  }
+</script>
+
+</body>
+</html>
